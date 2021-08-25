@@ -1,0 +1,180 @@
+/* External CSS */
+
+/* will make it for all tags */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Reset Style Ends */
+
+
+h2 {
+  color: darkslategray ;
+  background-color: #eee;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  font-size: 30px;
+}
+
+p {
+  font-weight: bold;
+  color: red !important;
+}
+
+/* id selector */
+#heroBlock {
+  background: url('../assets/images/may-2021-tablet-banner.png') no-repeat;
+  background-size: 100vw;
+  height: 500px;
+}
+
+/* class selector */
+.heading1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: normal;
+  padding: 100px 100px 10px 100px;
+  line-height: 1.6;
+}
+
+.primaryBtn{
+  background: none;
+  border: solid 1px #fff;
+  margin-left: 100px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.primaryBtn:hover{
+  background: #fff;
+  color: darkblue;
+}
+
+.demoReqSection{
+  text-align: center;
+}
+
+.demoReqSection h2{
+  background: none;
+  color: #0074AA;
+  font-weight: bold;
+  border-bottom: none;
+}
+
+.demoReqSection #demoBtn{
+  font-weight: normal;
+  background-color: #326407;
+  border: none !important;
+  margin-right: 0;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.demoReqSection #trialBtn {
+  background-color: #0074AA;
+  border: none;
+  box-shadow: none;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.demoReqSection a {
+  color: #0074aa;
+  font-size: 32px;
+  text-decoration: none;
+  display: block;
+  margin-top: 25px;
+}
+
+
+#logoBox{
+  float: left;
+  height: 100px;
+}
+
+#logoBox img {
+  margin-top: 16px;
+  margin-left: 15px;
+}
+
+/* Styling Primary Menu */
+nav#primaryMenu{
+  height: 100px;
+  text-align: right;
+}
+
+nav#primaryMenu ul{ /* nav tag with primaryMenu as id  */
+  list-style: none;
+  margin-top: 36px;
+  display: inline-block;
+}
+
+nav#primaryMenu ul li{
+  display: inline;
+}
+
+nav#primaryMenu ul li a {
+  color: #0074AA;
+  padding: 12.5px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+
+main {
+  clear: both;
+}
