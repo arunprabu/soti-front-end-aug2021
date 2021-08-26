@@ -39,7 +39,7 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	
+	list-style: none;
 }
 blockquote, q {
 	quotes: none;
@@ -64,11 +64,6 @@ h2 {
   font-size: 30px;
   text-align: center;
   padding: 35px 0;
-}
-
-p {
-  font-weight: bold;
-  color: red !important;
 }
 
 /* id selector */
@@ -173,4 +168,48 @@ nav#primaryMenu ul li a {
 
 main {
   clear: both;
+}
+
+/* About Us Page */
+.aboutUsImg {
+  background: red;
+  border: solid 6px red;
+  border-radius: 50%;
+}
+
+/* contact us page */
+input{
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  width: 220px;
+}
+
+/* Attribute Selector */
+input[type='text']{ 
+  border: solid 2px #ccc;
+  background: honeydew;
+}
+
+input[type='text']:focus{ 
+  border: solid 2px red;
+  outline: none;
+}
+
+#contactForm {
+  width: 60%;
+  background: #efefef;
+  margin: 40px auto;
+  padding: 50px;
+}
+
+#contactForm label {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+  margin: 20px 0;
+}
+
+.contactFormBtns{
+  margin-left: calc(50% + 4px); 
 }

@@ -7,13 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to SOTI Website!</title>
+
+   <!-- Loading external styles -->
+   <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
   <header>
-    <a href="./index.html">
-      <img src="./assets/images/SOTI-Logo.png" alt="SOTI Logo" width="160">
-    </a>
+    <div id="logoBox">
+      <a href="./index.html"><img src="./assets/images/SOTI-Logo.png" alt="SOTI Logo" width="160"></a>
+    </div>
     <nav id="primaryMenu">
       <ul>
         <li><a href="./index.html">Home</a></li>
@@ -23,9 +26,8 @@
         <li><a href="./contact.html">Contact Us</a></li>
       </ul>
     </nav>
-    <hr>
   </header>
-
+  
   <main>
     <h1>Contact Us</h1>
 
@@ -35,75 +37,72 @@
       <input type="search" placeholder="Enter your search query here">
       <button type="button">Search</button>
 
-      <br><br>
-      <form action="submit.php" method="POST">
+      <form id="contactForm" action="submit.php" method="POST">
         
         <label for="nameInput">Enter Name: </label>
         <input type="text" id="nameInput" name="fullName" required value="Arun">
 
-        <br><br>
+
         <label for="emailInput">Enter Email: </label>
         <input type="email" name="email" id="emailInput" required value="a@b.com">
 
-        <br><br>
         <label for="phoneInput">Enter Phone: (+91-224234224-2342)</label>
         <input type="tel" name="phone" id="phoneInput" required value="3242342">
 
-        <br><br>
         <label for="mobileInput">Enter 10 Digit Mobile no w/o country code</label>
         <input type="number" name="mobile" id="mobileInput" minlength="9" maxlength="10" required>
 
         <fieldset>
           <legend>Age Info:</legend>
-          <br><br>
           <label for="ageInput">Enter Age: </label>
           <input type="number" name="age" id="ageInput" min="18" max="99" required>
 
-          <br><br>
           <label for="dobInput">Enter DOB: </label>
           <input type="date" name="dob" id="dobInput">
         </fieldset>
 
-        <br><br>
+        
         <label for="interestInput">Interest level for our Trial version: </label>
         <input type="range" name="interest" id="interestInput" min="0" max="5" step="1" value="0">
 
-        <br><br>
+        
         <label for="favColorInput">Fav Color: </label>
         <input type="color">
 
-        <br><br>
-        <label for="queryInput">Enter your Query</label>
-        <br>
-        <textarea maxlength="256" id="queryInput" name="query" cols="60" rows="10"></textarea>
         
-        <br><br>
-        <!-- <input type="submit" value="Submit Query"> -->
-        <button type="reset">Reset</button>
-        <button type="submit">Submit Query</button>
+        <label for="queryInput">Enter your Query</label>
+        <textarea maxlength="256" id="queryInput" name="query" cols="60" rows="10"></textarea>
+
+        <div class="contactFormBtns">
+          <!-- <input type="submit" value="Submit Query"> -->
+          <button type="reset">Reset</button>
+          <button type="submit">Submit Query</button>
+        </div>
         
       </form>
 
-      <br><br>
-
-      <button type="button" onclick="locateMe()">Locate Me</button>
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14037.977911029318!2d77.0428185!3d28.4043328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf0e936bf8671b38!2sSOTI%20India%20Private%20Limited!5e0!3m2!1sen!2sin!4v1629794296274!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
     </section>
 
-    <aside>
-      <p>You can find us here</p>
-      <address>
-        <strong>SOTI India Private Limited.</strong><br>
-        Bestech Business Tower,<br>
-        2nd Floor, Sohna Rd, Sector 48,<br>
-        Gurugram, Haryana <br>
-        122004 <br>
-        <abbr title="Phone">P:</abbr> +91-124-464-SOTI (7684) <br>
-        <a href="mailto:contact@soti.net">Say Hi...</a>.<br> 
-      </address>
-    </aside>
+    <div>
+      <section id="mapLocationBox">
+        <button type="button" onclick="locateMe()">Locate Me</button>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14037.977911029318!2d77.0428185!3d28.4043328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf0e936bf8671b38!2sSOTI%20India%20Private%20Limited!5e0!3m2!1sen!2sin!4v1629794296274!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+
+      <aside>
+        <p>You can find us here</p>
+        <address>
+          <strong>SOTI India Private Limited.</strong><br>
+          Bestech Business Tower,<br>
+          2nd Floor, Sohna Rd, Sector 48,<br>
+          Gurugram, Haryana <br>
+          122004 <br>
+          <abbr title="Phone">P:</abbr> +91-124-464-SOTI (7684) <br>
+          <a href="mailto:contact@soti.net">Say Hi...</a>.<br> 
+        </address>
+      </aside>
+    </div>
   </main>
 
   <footer>
