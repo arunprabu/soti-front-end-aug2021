@@ -1,8 +1,14 @@
 /* External CSS */
 
+/* Embedding font using CSS3 */
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../assets/fonts/Pacifico/Pacifico-Regular.ttf');
+}
+
 /* will make it for all tags */
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Pacifico, Helvetica, sans-serif;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -161,7 +167,7 @@ nav#primaryMenu ul li{
 nav#primaryMenu ul li a {
   color: #0074AA;
   padding: 12.5px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Pacifico, Helvetica, sans-serif;
   text-decoration: none;
 }
 
@@ -212,4 +218,36 @@ input[type='text']:focus{
 
 .contactFormBtns{
   margin-left: calc(50% + 4px); 
+}
+
+/* Responsive CSS */
+@media only screen and (max-width: 600px) {
+  body{
+    background: yellow;
+  }
+
+  #primaryMenu{
+    display: none;
+  }
+
+  .heading1 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: normal;
+    padding: 20px 20px 10px 20px;
+    line-height: 1.6;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body{
+    background: lightgoldenrodyellow;
+  }
+
+}
+
+@media only screen and (min-width: 2200px) {
+  body{
+    background: lightgrey;
+  }
 }
