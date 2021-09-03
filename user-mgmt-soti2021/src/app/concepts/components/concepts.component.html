@@ -1,0 +1,101 @@
+<div class="container-fluid">
+  <p>Data Received From Child Comp: {{dataReceivedFromChildComp}}</p>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" data-bs-toggle="tab" data-bs-target="#basic-databinding" role="tab"
+        aria-controls="basic-databinding" aria-selected="true">Basic Data Binding</a>
+      <a class="nav-item nav-link" data-bs-toggle="tab" data-bs-target="#cpb-tab" role="tab" aria-controls="cpb-tab"
+        aria-selected="false">Custom Prop Binding</a>
+      <a class="nav-item nav-link" data-bs-toggle="tab" data-bs-target="#ceb-tab" role="tab" aria-controls="ceb-tab"
+        aria-selected="false">Child to Parent Comp Communication</a>
+      <a class="nav-item nav-link" data-bs-toggle="tab" data-bs-target="#directives-tab" role="tab"
+        aria-controls="directives-tab" aria-selected="false">Directives</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="basic-databinding" role="tabpanel"
+      aria-labelledby="basic-databinding-tab">
+      <h2>Basic Data Binding</h2>
+      <h4>String Interpolation</h4>
+      <p>{{appName}}</p>
+      <p>{{totalTeamMembers}}</p>
+      <input type="text" value="{{appName}}">
+
+      <hr>
+      <h4>Property Binding</h4>
+      <input type="text" [value]="companyName"> <!-- Prop Binding -->
+      
+      <hr>
+      <h4>Event Binding</h4>
+      <button type="button" onclick="handleClickMe()">Click Me -- Will not work. see console</button>
+      <br><br>
+      <button type="button" (click)="handleClickMe($event)">Click Me</button>
+
+      <hr>
+      <h4>Two Way Binding</h4>
+      <p>{{courseName}}</p> <!-- SI -->
+      <input type="text" [value]="courseName"> <!-- Prop Binding-->
+      <br>
+      <input type="text" [(ngModel)]="courseName"> <!-- Two Way Binding-->
+
+
+    </div>
+
+    <div class="tab-pane fade" id="cpb-tab" role="tabpanel" aria-labelledby="cpb-tab-tab">
+      <h2>Custom Property Binding -- Parent to Child Comp Communication</h2>
+      <app-cpb></app-cpb>
+      <!-- Step 2 of CPB: age is a custom prop --  bind the data with age property -->
+      <app-cpb [age]="30"></app-cpb>
+      <app-cpb [age]="40"></app-cpb>
+      <app-cpb [age]="50"></app-cpb>
+      <app-cpb [age]="personAge"></app-cpb>
+    </div>
+
+    <div class="tab-pane fade" id="ceb-tab" role="tabpanel" aria-labelledby="ceb-tab-tab">
+      <h2>Child to Parent Comp Communication</h2>
+      <!-- Step 5 of CEB: attach event handler to receive the data passed - $event will get the data from child comp -->
+      <app-ceb (profileLoaded)="handleProfileLoaded($event)"></app-ceb>
+      
+    </div>
+
+    <div class="tab-pane fade" id="directives-tab" role="tabpanel" aria-labelledby="directives-tab">
+      <h2>Directives</h2>
+
+      <pre>
+        Directives
+        ----
+          Special Instructions to the DOM 
+
+          1. Attribute Directives
+                Examples: routerLink, routerLinkActive
+
+          2. Structural Directives
+              *ngIf, *ngFor, ngSwitch 
+
+          3. Custom Attribute Directives
+              
+          4. Custom Structural Directives (TODO)
+        
+      </pre>
+
+      <h4>*ngIf - Demo</h4>
+     
+      
+      
+      
+      <h4>*ngFor - Demo</h4>
+     
+
+      <!-- TODO: find  index in the above *ngFor -->
+      
+      <!-- TODO: learn about ngSwitch -->
+
+      <h4>Custom Attribute Directive - Demo </h4>
+      
+      
+    </div>
+
+
+  </div>
+</div>

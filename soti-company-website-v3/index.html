@@ -24,10 +24,7 @@
 
   </style>
 
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -179,7 +176,8 @@
             <div class="d-flex w-100 gap-2">
               <label for="newsletter1" class="visually-hidden">Email address</label>
               <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="btn btn-primary" type="button">Subscribe</button>
+              <!-- Inline Scripting -- Not recommended -->
+              <button class="btn btn-primary" type="button" onclick="alert('clicked')">Subscribe</button>
             </div>
           </form>
         </div>
@@ -191,6 +189,18 @@
     </footer>
   </div>
 
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+  <script src="scripts/main.js"></script>
+
+  <!-- Internal Scripting -->
+  <script>
+    var y = 20;
+    console.log(y);
+  </script>
 
 </body>
 
