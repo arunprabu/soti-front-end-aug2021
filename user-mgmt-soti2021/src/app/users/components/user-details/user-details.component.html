@@ -1,0 +1,64 @@
+<a routerLink="/users">Go back</a>
+<div class="container">
+  <div class="row">
+    <div class="card col-md-12">
+      <div class="card-body">
+        <h5 class="card-title">John</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <p>Phone: 23233322</p>
+        <p>Email: a@b.com</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group row mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" placeholder="Enter name"
+                        >
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Phone</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" placeholder="Enter Phone"
+                        >
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" 
+                        placeholder="Enter Email">
+                    </div>
+                  </div>
+
+                  <div class="alert alert-success">
+                    Updated successfully!
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

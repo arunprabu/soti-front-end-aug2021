@@ -80,19 +80,31 @@
       </pre>
 
       <h4>*ngIf - Demo</h4>
-     
       
+      <div class="alert alert-success" *ngIf="isLoggedIn; else NotAuthBox">
+        As logged in user, you can access premium features!
+      </div>
+
+      <ng-template #NotAuthBox>
+        <div class="alert alert-danger">
+          You can't access premium features. Pls login.
+        </div>
+      </ng-template>      
       
       
       <h4>*ngFor - Demo</h4>
+      <ul>
+        <li *ngFor="let skill of skillList">{{skill}}</li>
+      </ul>
+      <!-- TODO: find  index in the above *ngFor -->
      
 
-      <!-- TODO: find  index in the above *ngFor -->
-      
       <!-- TODO: learn about ngSwitch -->
-
       <h4>Custom Attribute Directive - Demo </h4>
-      
+      <div appColorizer>
+        Colorizer Directive Demo
+        <button>Click me</button>
+      </div>
       
     </div>
 
