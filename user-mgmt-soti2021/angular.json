@@ -106,9 +106,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "user-mgmt-soti2021"
+  "defaultProject": "user-mgmt-soti2021",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

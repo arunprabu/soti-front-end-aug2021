@@ -8,12 +8,13 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <app-menu>
           <li class="nav-item">
-            <a class="nav-link" href="#">Signup</a>
+            <a class="nav-link" routerLink="/signup">Signup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" routerLink="/login">Login</a>
           </li>
         </app-menu>
+        <a routerLink="products/cart" class="btn btn-info">Cart ({{cartItemsCount}})</a>
       </div>
     </div>
   </nav>  

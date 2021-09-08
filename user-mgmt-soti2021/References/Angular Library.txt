@@ -1,0 +1,87 @@
+Create Angular Library
+---
+Create Workspace. 
+  ng new my-big-app --create-application=false 
+
+The above cmd will not create app. Instead it will create workspace.
+It's an empty project. 
+
+
+Creating library is a 3 step process
+Step 1:
+Let's create a Library
+
+Step 2:
+And  Let's create An Angular App 
+
+Step 3: 
+Make use of the library in an angular app 
+=====
+
+Let's now create a Library 
+------
+  ng g library my-weather-lib --prefix=mwl
+
+  As of Angular 11, 'projects' folder would be created and inside that you can see the library.
+
+  Let's have quick file walk thru. 
+
+  Check the my-weather-lib's package.json 
+
+  And the package.json of my-big-app and tsconfig.json also.
+
+  Library has been created. Let's now look at create an angular app. 
+
+
+Let''s create an Angular App
+-------
+  ng g application weather-app-demo 
+
+  This app will not have package.json. 
+  but all other things are as same as any default ng app
+
+  Now, let's start the server of the angular app. 
+  ng s weather-app-demo 
+
+  The app will run in localhost:4200
+
+Now, Let's make use of the library
+-------
+  If we want to use the library within angular app, we have to build the library.
+
+  ng build my-weather-lib --prod 
+  Don't forget --prod in the above command if you are working on angular 9+. 
+
+  Look at the dist folder's location, it is outside the 'projects' folder.
+
+  now, you can import the library into app.module of angular app
+
+  And use the selector of library in your component.
+
+  thats it...
+
+  if you are modifying your library.. don't forget to build the library again.
+  Note: if your library has http calls, you need to import 'HttpClientModule' in library's module.
+  And If you do binding, *ngIf, *ngFor kinds of stuff, you need to import 'CommonModule' in library's module.
+--------
+For more, refer this project
+https://github.com/arunprabu/angularlibrary
+
+
+You can also create a tar archive file
+TAR Archive file compressed using Gnu Zip (gzip) for the library
+
+cd dist/my-weather-lib 
+npm pack
+After this is over, you can install the package using npm install cmd
+cd .. 
+cd ..
+npm install ./dist/my-weather-lib/my-weather-lib-0.0.1.tgz
+
+Then, find the above package inside node_modules folder 
+Finally, don't forget to remove the entry is main tsconfig.json (workspace level file)
+
+Restart your app and then check it. 
+================
+Todo:
+Further Reading: How to publish package into npm...

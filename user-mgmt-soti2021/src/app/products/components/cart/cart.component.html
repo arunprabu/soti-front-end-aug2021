@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card shopping-cart">
+    <div class="card-header bg-dark text-light">
+      Shipping cart
+      <a routerLink="/products" class="btn btn-outline-info btn-sm pull-right">Continue shopping</a>
+      <div class="clearfix"></div>
+    </div>
+    <div class="card-body" >
+      <!-- PRODUCT -->
+      <div class="row" *ngFor="let pdt of cartItemList">
+        <div class="col-12 col-sm-12 col-md-2">
+          <img class="img-responsive" src="http://placehold.it/120x80" alt="preview" width="120" height="80">
+        </div>
+        <div class="col-12 col-sm-12 text-left col-md-6">
+          <h4 class="product-name"><strong>{{pdt.name}}</strong></h4>
+          <h6>{{pdt.category}}</h6>
+        </div>
+        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+          <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+            <h6><strong>{{pdt.price}}<span class="text-muted">x</span></strong></h6>
+          </div>
+          <div class="col-4 col-sm-4 col-md-4">
+            <div class="quantity">
+              <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
+            </div>
+          </div>
+          <div class="col-2 col-sm-2 col-md-2 text-right">
+            <button type="button" class="btn btn-outline-danger btn-xs" title="Remove from Cart">X</button>
+          </div>
+        </div>
+      </div>
+      
+      <hr>
+      <!-- END PRODUCT -->
+      <hr>
+    </div>
+    <div class="card-footer">
+      <div class="pull-right" style="margin: 10px">
+        <a href="" class="btn btn-success pull-right">Checkout</a>
+        <div class="pull-right" style="margin: 5px">
+          Total price: <b>TODO later</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

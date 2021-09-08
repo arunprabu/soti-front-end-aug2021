@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,12 @@ import { CebComponent } from './concepts/components/ceb/ceb.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { AddUserComponent } from './users/components/add-user/add-user.component';
 import { UserDetailsComponent } from './users/components/user-details/user-details.component';
+import { UsersModule } from './users/users.module';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { SignupComponent } from './auth/components/signup/signup.component';
+import { LoginComponent } from './auth/components/login/login.component';
+import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
+import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 
 // Main Switching Box
 @NgModule({
@@ -27,22 +33,24 @@ import { UserDetailsComponent } from './users/components/user-details/user-detai
     MenuComponent,
     HomeComponent,
     ConceptsComponent,
-    UsersComponent,
     AboutComponent,
     CpbComponent,
     CebComponent,
     ColorizerDirective,
-    AddUserComponent,
-    UserDetailsComponent
+    PageNotFoundComponent,
+    SignupComponent,
+    LoginComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule, 
     AppRoutingModule,
     FormsModule, // for two way binding
-    ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent] // AppModule should be bootstrapped with a comp -- AppComponent
 })
 export class AppModule { }

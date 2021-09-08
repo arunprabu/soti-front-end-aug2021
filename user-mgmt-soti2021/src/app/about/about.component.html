@@ -1,1 +1,35 @@
-<p>about works!</p>
+<div class="container">
+  <h1>Pipes!</h1>
+  <p>Transform info from one format to another</p>
+
+  <h2>uppercase and lowercase</h2>
+  <p>{{sampleText}}</p>
+  <p>{{sampleText |uppercase}}</p>
+  <p>{{sampleText |lowercase}}</p>
+
+  <hr>
+  <h3>date pipe</h3>
+  <p>{{today}}</p>
+  <p>{{today | date }}</p>
+
+  <!-- Parameterised Pipe -->
+  <p>{{today | date: 'dd/MMMM/yyyy'}}</p>
+  <p>{{today | date: 'yyyy - MMM - dd'}}</p>
+  <p>{{today | date: 'yyyy - MMM - dd @ hh:mm a'}}</p>
+  <p>{{today | date: 'dd/MMM/yyyy @ hh:mm:ss a'}}</p>
+
+  <!-- Chaining Pipes -->
+  <p>{{today | date: 'dd/MMM/yyyy @ hh:mm:ss' | uppercase}}</p>
+
+  <h4>Custom Pipes - Demo</h4>
+  <p>ng g p shared/pipes/ellipsis</p>
+
+  <p>{{exampleText}}</p>
+  <p>{{exampleText | ellipsis }}</p>
+
+  <p>{{exampleText | ellipsis: 30 }}</p>
+
+  <p>{{exampleText | ellipsis: 60 }}</p>
+  <p>{{exampleText | ellipsis: 240 }}</p>
+
+</div>
